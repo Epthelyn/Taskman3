@@ -1,0 +1,19 @@
+{
+    "name": "Taskman 3 Beta",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#252F3F",
+    "theme_color": "#161E2E",
+    "icons": [
+        {
+           "src": "../icons/taskman-beta.png",
+           "type": "image/png",
+           "sizes": "256x256"
+        },
+        {
+           "src": "../icons/taskman-beta-512.webp",
+           "type": "image/webp",
+           "sizes": "512x512"
+        }
+    ]
+}

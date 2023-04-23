@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model TaskmanUser {
+  userId              Int                @id @default(autoincrement())
+  email               String
+  passwordHash        String
+  isAdmin             Boolean
+  selectedCharacterId Int?
+  selectedCharacter   TaskmanCharacter?  @relation(fields: [selectedCharacterId], references: [characterId])
+  taskmanCharacters   TaskmanCharacter[] @relation("AllCharactersOfUser")
+}
+
+model TaskmanCharacter {
+  characterId   Int           @id @default(autoincrement())
+  rsn           String
+  userId        Int
+  taskmanStatus Int
+  ironmanStatus Int
+  user          TaskmanUser   @relation("AllCharactersOfUser", fields: [userId], references: [userId])
+  TaskmanUser   TaskmanUser[]
+}

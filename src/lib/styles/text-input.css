@@ -1,0 +1,55 @@
+
+.select-wrapper {
+    display: flex;
+    position: relative;
+}
+
+.filter-action {
+    box-sizing: border-box;
+    height: 30px;
+    width: 30px;
+    border-radius: 0 4px 4px 0;
+    background-color: #10131B;
+    padding: 9px;
+    cursor: pointer;
+}
+
+input {
+    flex: 1 1 0;
+    box-sizing: border-box;
+    background-color: #C2C5CA;
+    color: black;
+    height: 30px;
+    border: 2px solid #10131B;
+    padding: 1px 2px;
+}
+
+input[type=number] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    margin: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input {
+    border-radius: 4px 0 0 4px;
+}
+
+input:hover {
+    background-color: #FAFAFB;
+}
+
+input:focus {
+    outline: none;
+}
+
+.select-wrapper:focus-within {
+    outline: solid 2px var(--color-primary-dark);
+    border-radius: 4px;
+}
